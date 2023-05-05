@@ -12,7 +12,7 @@ using ClassLibrary;
 
 namespace WinFormMiniProject
 {
-    public partial class PersonEntry : Form
+    public partial class PersonEntry : Form, ISaveAddress
     {
         BindingList<AddressModel> addresses = new BindingList<AddressModel>();
         
@@ -29,10 +29,17 @@ namespace WinFormMiniProject
         
         private void addNewAddresses_Click(object sender, EventArgs e)
         {
+            AddressModel newAddress = new AddressModel();
             //Open the address entry form
             AddressEntry entry = new AddressEntry();
 
             entry.Show();
+        }
+
+
+        public void SaveAddress(AddressModel address)
+        {
+            address.Add(address);
         }
     }
 }

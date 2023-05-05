@@ -17,19 +17,6 @@ namespace WinFormMiniProject
             InitializeComponent();
         }
 
-        private void AddressEntry_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void saveButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
