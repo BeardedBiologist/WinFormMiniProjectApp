@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressEntry.Designer.cs">
+      <DependentUpon>AddressEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddressEntry.resx">
+      <DependentUpon>AddressEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonEntry.resx">
       <DependentUpon>PersonEntry.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,9 +89,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DemoLib\DemoLib.csproj">
-      <Project>{755f9ef2-0b96-46bc-8dbe-e55ebad7bc98}</Project>
-      <Name>DemoLib</Name>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{1f17bdb8-65a7-4447-b59d-a88d228b8612}</Project>
+      <Name>ClassLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

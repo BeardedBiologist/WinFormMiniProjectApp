@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,18 +20,19 @@ namespace WinFormMiniProject
         {
             InitializeComponent();
 
+            addresses.Add(new AddressModel { StreetAddress ="123 Fake St.", City = "Scranton", State = "PA", ZipCode = "123456"});
+
             addressesList.DataSource = addresses;
-            addressesList.DisplayMember = nameof(AddressModel.StreetAddress);
+            addressesList.DisplayMember = nameof(AddressModel.AddressDisplayValue);
         }
 
-        private void addressesListLabel_Click(object sender, EventArgs e)
+        
+        private void addNewAddresses_Click(object sender, EventArgs e)
         {
+            //Open the address entry form
+            AddressEntry entry = new AddressEntry();
 
-        }
-
-        private void addressesList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            entry.Show();
         }
     }
 }
